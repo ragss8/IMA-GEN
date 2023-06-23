@@ -1,70 +1,18 @@
-# Getting Started with Create React App
+IMA-GEN 
+:- It is a React based app where you can fetch random images and the limit is set upto 15-images as of now and on clicking on these particular images you can get the description of the images.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+React components used:
+1. useState: This hook is used to create state variables in functional components. It allows to define and update state values.
 
-## Available Scripts
+2. useEffect: This hook allows to perform side effects in functional components. It is used to handle asynchronous data fetching and other side effects that occur after rendering.
 
-In the project directory, you can run:
+Inside the `ImageGallery` component, it is used to fetch images from the Unsplash API when the `category` prop changes. It ensures that the API call is made after the component has rendered and updates the `images` state variable accordingly.
+Inside the `ImagePage` component, it is used to fetch a single image from the Unsplash API based on the `id` parameter from the URL. It updates the `image` state variable with the fetched data.
 
-### `npm start`
+3. useParams: This hook is provided by the `react-router-dom` library and allows to access the parameters from the URL, useParams` is used to retrieve the `id` parameter from the URL inside the `ImagePage` component.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+4. BrowserRouter` is the top-level component that wraps the entire application and provides the routing functionality.
+ Routes` is used to define the routes and their corresponding components.
+ Route` is used to define a specific route with a path and the component to render when the path matches.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+5. Link: This component is provided by the `react-router-dom` library and is used to create links between different routes in the application. In this project `Link` is used to create links to category pages and individual image pages.

@@ -1,4 +1,4 @@
-IMA-GEN 
+IMA-GEN [IMAGE-GENERATOR] 
 :- It is a React based app where you can fetch random images and the limit is set upto 15-images as of now and on clicking on these particular images you can get the description of the images.
 
 React Hooks/components used:
